@@ -1,11 +1,28 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+vvdn@4313--IOT--GGN:~/SUSE_CLOUD_NATIVE_SCHR/phase_2/nd064_course_1/project$ sudo docker build -f Dockerfile -t techtrends techtrends
+Sending build context to Docker daemon  23.42MB
+Step 1/9 : FROM python:2.7
+ ---> 68e7be49c28c
+Step 2/9 : LABEL maintainer "Ankush Kumar Singh"
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
-
+vvdn@4313--IOT--GGN:~/SUSE_CLOUD_NATIVE_SCHR/phase_2/nd064_course_1/project$ sudo docker run -d -p 7111:3111 techtrends
+eb800caba6cc67fd5b570d8c6cf5e94c1e002ab2ec62b388f85985d81401c2b6
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+vvdn@4313--IOT--GGN:~/SUSE_CLOUD_NATIVE_SCHR/phase_2/nd064_course_1/project$ sudo docker logs eb800caba6cc67fd5b570d8c6cf5e94c1e002ab2ec62b388f85985d81401c2b6
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+# TODO: paste logs from the Docker container
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2021-08-31 17:25:00,502 - werkzeug - INFO -  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-08-31 17:25:21,823 - werkzeug - INFO - 172.17.0.1 - - [31/Aug/2021 17:25:21] "GET / HTTP/1.1" 200 -
+2021-08-31 17:25:22,409 - werkzeug - INFO - 172.17.0.1 - - [31/Aug/2021 17:25:22] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-31 17:25:22,420 - werkzeug - INFO - 172.17.0.1 - - [31/Aug/2021 17:25:22] "GET /favicon.ico HTTP/1.1" 404 -
+ 
