@@ -4,8 +4,7 @@
 name: TechTrends - Package with Docker 
 
 #RUBRIC_REQ
-# Controls when the action will run. Triggers the workflow on pull request
-# events but only for the main branch
+# Controls when the action will run.Trigger on every push to the main branch
 on:
   push:
     branches: [ main ]
@@ -44,4 +43,4 @@ jobs:
           file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: aksresonance/techtrends:latest   #IMAGE TO SYNC ON DOCKER REGISTRY
+          tags: aksresonance/techtrends:latest   #Image pushed to DockerHub with techtrendstag
